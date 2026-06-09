@@ -44,7 +44,6 @@ fn compare_file(base_file_path: &str, target_file_path: &str, silent: bool) -> i
     let mut target_file_buffer = [0u8; BUFFER_SIZE];
 
     let mut offset = 0u64;
-
     loop {
         let base_file_bytes = read_chunk(&mut base_file, &mut base_file_buffer)?;
         let target_file_bytes = read_chunk(&mut target_file, &mut target_file_buffer)?;
